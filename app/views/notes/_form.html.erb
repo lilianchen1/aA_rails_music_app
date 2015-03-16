@@ -1,0 +1,7 @@
+<p>Add Notes</p>
+<form action="/tracks/<%= track.id %>/notes" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="note"></label>
+  <textarea name="note[note]" id="note">Enter note here...</textarea>
+  <input type="submit" value="Add Note">
+</form>

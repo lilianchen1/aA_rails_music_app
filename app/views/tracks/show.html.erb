@@ -1,0 +1,14 @@
+<h2><%= @track.name %></h2>
+<%= link_to "Edit Song", edit_track_url %>
+<%= button_to "Delete Song", track_url(@track), method: :delete %>
+
+<h3>Lyrics</h3>
+<p><%= @track.lyrics %></p>
+
+<%= render 'notes/form', track: @track %>
+<%= render 'notes/note', track: @track %>
+<br>
+
+<%= link_to "Back to album", album_url(@track.album) %>
+<%= link_to "Back to band", band_url(@track.album.band) %>
+<%= link_to "Back to all bands", bands_url %>
